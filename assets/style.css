@@ -1,0 +1,358 @@
+/* style.css */
+
+/* Reset dasar untuk konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(244, 3, 3, 0.929);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #faf9f9; /* Merah untuk tema Indonesia */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f8f3f3;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0b0b0b;
+}
+
+/* Hero Section dengan Background Image Full Screen */
+.hero {
+    height: 100vh; /* Full viewport height */
+    background-image: url('bgprofil.jpg'); /* Placeholder gambar Indonesia, ganti dengan URL gambarmu */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Teks putih untuk kontras dengan background */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: black;
+    padding: 80px;
+    margin-bottom: 30px;
+    
+}
+
+/* bagian tentang css */
+
+/* About Section */
+.about-section {
+    background-size: cover;              
+    background-position: center;         
+    background-repeat: no-repeat;        
+    background-attachment: scroll;       
+    min-height: 100vh;                   
+    padding: 60px 20px;                  
+    display: flex;
+    justify-content: center; 
+    background-image: url('bgtentang.jpg');
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #151515;
+}
+
+.intro {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 48px;
+    color: #141414;
+    line-height: 1.8;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.card {
+    background-color: white;
+    padding: 42px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #d32f2f;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.card p {
+    font-size: 12px;
+    color: #444;
+    /* line-height: 1.7; */
+}
+
+/* bagian css sejarah */
+
+.history-section {
+    max-width: 1000vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;              
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('bgsejarah.jpeg');
+    min-height: 100vh;
+}
+
+.history-section h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: red;
+}
+
+.history-section .intro {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 60px;
+    color: rgb(12, 12, 12);
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+/* garis kecil */
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #1c1b1b;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-year {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+    right: -40px;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+    left: -40px;
+}
+
+.timeline-content {
+    background-color: #f8f8f8;
+    padding: 24px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 60px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 60px;
+}
+
+.timeline-content h2 {
+    font-size: 22px;
+    color: #d32f2f;
+    margin-bottom: 12px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* Highlight Box */
+.highlight-box {
+    background-color: #fff5f5;
+    border-left: 6px solid #d32f2f;
+    padding: 24px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 0 8px 8px 0;
+}
+
+.highlight-box h3 {
+    font-size: 20px;
+    color: #d32f2f;
+    margin-bottom: 12px;
+}
+
+
+/* bagian css kontak */
+
+.background-kontak {
+    min-height: 100vh; /* gambar Full layar */
+    
+    background-image: url('bgKontak.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    padding: 20px;
+    max-width: 500px;
+}
+
+.kontak2 {
+    display: grid;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    padding: 10px;
+}
+
+.Kontak {
+    display: flex;
+    gap: 2px;
+    background-color:  rgba(76, 74, 74, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.kontak1 {
+    align-self: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #121111;
+    color: white;
+    font-size: 14px;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 16px 20px;
+    }
+    
+    nav ul {
+        margin-top: 16px;
+    }
+
+    nav ul li {
+        margin: 0 12px;
+    }
+
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-section h1 {
+        font-size: 28px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .Kontak {
+        display: grid;
+        margin-top: 150px;
+    }
+
+    iframe {
+        max-width: 300px;
+    }
+}
